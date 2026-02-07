@@ -1,0 +1,169 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(249, 171, 252);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.lock-box-container {
+    width: 100%;
+    height: 50%;
+
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.lock-box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    border: 1px solid pink;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.lock-box > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.lock-header {
+    flex-direction: column;
+    border-radius: 8px 8px 0px 0px;
+    background-color: maroon;
+    color: white;
+}
+
+.lock-submit {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.lock-combination {
+    gap: 8px;
+}
+
+.lock-combination > div {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+
+    border-radius: 4px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.lock-combination > div > div {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: maroon;
+    color: white;
+}
+
+.lock-combination > div > .up-button {border-radius: 4px 4px 0px 0px;}
+
+.lock-combination > div > .down-button {border-radius: 0px 0px 4px 4px;}
+
+.lock-combination > div > .input-button {
+    background-color: white;
+
+    .lock-enter {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: none;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        outline: none;
+        box-sizing: border-box;
+
+        text-align: center;
+
+    }
+}
+
+.submit-lock {
+    width: 128px;
+    height: 64px;
+    border: none;
+    background-color: maroon;
+    color: white;
+    border-radius: 8px;
+}
+
+/* === Question Container === */
+
+.question-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas: 
+    "c1 c1 c2 c3 c3 c4"
+    "c5 c6 c6 c6 c6 c7"
+    "c8 c9 c9 c10 c10 c11";
+}
+
+.question-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.question-container > div > button {
+    width: 100%;
+    height: 64px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.question-container > .child-9 > button {
+    width: 100%;
+    height: 64px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+.child-1  { grid-area: c1; }
+.child-2  { grid-area: c2; }
+.child-3  { grid-area: c3; }
+.child-4  { grid-area: c4; }
+.child-5  { grid-area: c5; }
+.child-6  { grid-area: c6; border: 1px solid white; border-radius: 8px; background-color: maroon; color: white; }
+.child-7  { grid-area: c7; }
+.child-8  { grid-area: c8; }
+.child-9  { grid-area: c9; }
+.child-10 { grid-area: c10; }
+.child-11 { grid-area: c11; }
+
+.hidden {
+    display: none;
+}
